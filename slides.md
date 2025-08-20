@@ -45,9 +45,6 @@ Begrüßung und Einführung:
 
 ---
 
-transition: fade-out
----
-
 # Was ist Zod?
 
 <v-clicks>
