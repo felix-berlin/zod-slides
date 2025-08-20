@@ -1,5 +1,5 @@
 ---
-theme: seriph
+theme: apple-basic
 background: https://source.unsplash.com/1920x1080/\?code,typescript
 class: text-center
 highlighter: shiki
@@ -16,9 +16,18 @@ mdc: true
 ---
 
 # Zod
+
 ## TypeScript-first Schema Validation
 
-Typsichere Validierung für moderne TypeScript-Anwendungen
+<div class="flex items-center justify-center gap-8 my-8">
+  <img src="/assets/ts-logo-512.svg" class="w-16 h-16" alt="TypeScript Logo" />
+  <div class="text-4xl">+</div>
+  <img src="/assets/logo-glow.webp" class="w-16 h-16" alt="Zod Logo" />
+</div>
+
+<div class="mt-6">
+  Typsichere Validierung für moderne TypeScript-Anwendungen
+</div>
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -26,7 +35,16 @@ Typsichere Validierung für moderne TypeScript-Anwendungen
   </span>
 </div>
 
+<!--
+Begrüßung und Einführung:
+- Vorstellung: Heute sprechen wir über Zod
+- Zielgruppe: TypeScript-Entwickler, die sich mit Validierung beschäftigen
+- Dauer: ca. 10-15 Minuten
+- Zod ist eine der populärsten Schema-Validation Libraries im TypeScript-Ökosystem
+-->
+
 ---
+
 transition: fade-out
 ---
 
@@ -41,6 +59,15 @@ transition: fade-out
 - **Entwicklerfreundlich** - intuitive API und excellente DX
 
 </v-clicks>
+
+<!--
+Key Points für diese Slide:
+- Betone "TypeScript-first" - das ist der Hauptunterschied zu anderen Libraries
+- Zero Dependencies erwähnen - wichtig für Bundle-Size
+- Type Inference erklären - automatische Typen sind ein Killer-Feature
+- Runtime + Compile-time Sicherheit hervorheben
+- Frage ans Publikum: "Wer kennt andere Validation Libraries wie Joi oder Yup?"
+-->
 
 <style>
 h1 {
@@ -78,6 +105,16 @@ const user = await fetchUser('123')
 // user.nonExistent - Kein Fehler zur Compile-Zeit
 ```
 
+<!--
+Probleme hervorheben:
+- any-Type überall - keine Typsicherheit
+- Manuelle Validierung ist fehleranfällig und mühsam
+- Keine automatische Type-Generierung
+- Runtime-Fehler sind häufig
+- Code-Duplikation zwischen Validation und Types
+- Beispiel: "Was passiert wenn die API ein zusätzliches Feld zurückgibt?"
+-->
+
 ---
 
 # Die Zod-Lösung
@@ -104,6 +141,16 @@ async function fetchUser(id: string): Promise<User> {
 }
 ```
 
+<!--
+Zod-Vorteile demonstrieren:
+- Ein Schema = automatische Types UND Validation
+- z.infer<> zeigen - das ist der Magic Moment!
+- .parse() wirft Fehler bei ungültigen Daten
+- Keine Code-Duplikation mehr
+- IntelliSense funktioniert perfekt
+- Live-Demo: "Schauen wir uns z.infer in VS Code an"
+-->
+
 ---
 
 # Hauptvorteile von Zod
@@ -113,11 +160,13 @@ async function fetchUser(id: string): Promise<User> {
 <div>
 
 ## 🔒 **Type Safety**
+
 - Automatische TypeScript-Typen
 - Compile-time und Runtime-Sicherheit
 - Keine Type-Assertions nötig
 
 ## ⚡ **Performance**
+
 - Zero Dependencies
 - Kleine Bundle-Größe
 - Schnelle Validierung
@@ -127,11 +176,13 @@ async function fetchUser(id: string): Promise<User> {
 <div>
 
 ## 🛠️ **Developer Experience**
+
 - Intuitive API
 - Excellente Fehlermeldungen
 - IntelliSense-Support
 
 ## 🔧 **Flexibilität**
+
 - Composable Schemas
 - Custom Validations
 - Transformations
@@ -224,6 +275,7 @@ const TransformSchema = z.string()
 </div>
 
 ---
+
 layout: center
 class: text-center
 ---
@@ -239,11 +291,12 @@ Zod bietet die **beste Lösung** für typsichere Validierung in TypeScript-Proje
 **Type Safety + Developer Experience + Performance**
 
 ---
+
 layout: center
 class: text-center
 ---
 
-# Danke!
+# Danke
 
 Fragen?
 
